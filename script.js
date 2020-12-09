@@ -13,6 +13,7 @@ form.addEventListener('submit', e => {
     const password = form.password.value;
     const usernamePatt = /^[a-zA-Z]{5,8}$/;
     const passwordPatt = /^[a-zA-Z0-9]{6,10}$/;
+    
 
     if(usernamePatt.test(username)) {
         feedUser.textContent =  'valid username';
@@ -28,5 +29,31 @@ form.addEventListener('submit', e => {
     } else {
         feedPass.textContent = 'invalid password';
         feedPass.setAttribute('class', 'inputInvalid');
+    }
+});
+
+form.addEventListener('keyup', e => {
+    console.log(e.target.style);
+    const username = form.username.value;
+    const password = form.password.value;
+    const usernamePatt = /^[a-zA-Z]{5,8}$/;
+    const passwordPatt = /^[a-zA-Z0-9]{6,10}$/;
+
+    if (usernamePatt.test(username)) {
+        userLabel.style.borderStyle = 'none';
+        userLabel.style.border = '3px solid limegreen';
+        
+    } else {
+        userLabel.style.borderStyle = 'none';
+        userLabel.style.border = '3px solid crimson';
+    }
+
+    if (passwordPatt.test(password)) {
+        passLabel.style.borderStyle = 'none';
+        passLabel.style.border = '3px solid limegreen';
+        
+    } else {
+        passLabel.style.borderStyle = 'none';
+        passLabel.style.border = '3px solid crimson';
     }
 });
