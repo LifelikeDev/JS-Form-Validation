@@ -1,0 +1,36 @@
+body {
+    padding: 0;
+    margin: 0;
+    background: #bdb8b8;
+}
+.form {
+    background: #fff;
+    /* padding: 1em; */
+    margin: 12em auto;
+    max-width: 35%;
+    height: 40vh;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+form > label, form > input,
+form > submit {
+    padding: 0.5em;
+    margin: 0.5em;
+    font-weight: 600;
+}
+.inputValid {
+    color: limegreen;
+    font-weight: 800;
+    font-size: 1.1em;
+    text-decoration: italic;
+    margin-left: 3.2em;
+} 
+.inputInvalid {
+    color: crimson;
+    font-weight: 800;
+    font-size: 1.1em;
+    text-decoration: italic;
+    margin-left: 3.2em;
+} 
